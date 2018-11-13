@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>获取地区轮廓线以及轮廓线坐标文件</title>
+	<script type="text/javascript" src="js/CityData.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4"></script>
+	
+    
+    <style type="text/css">
+        body {
+            font-size: 13px;
+            margin: 10px
+        }
+        #container {
+            width: 800px;
+            height: 500px;
+            border: 1px solid gray
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+    <div id="event_descr"></div>
+    <br />输入省、直辖市或县名称：
+    <input type="text" id="districtName" style="width:80px" value="大连市">
+    <input type="button" onclick="getBoundaryByClick(true)" value="获取轮廓线">
+    <input type="button" onclick="getAllBoundaryByClick()" value="获取所有省市的轮廓线">
+    <input type="button" onclick="getAllBoundaryOfChina()" value="获取所有坐标">
+    <input type="button" onclick="saveAllBoundaryList()" value="保存所有坐标">(cityData对象的值)
+	<script type="text/javascript" src="js/GetData.js"></script>
+</body>
+
+</html>
